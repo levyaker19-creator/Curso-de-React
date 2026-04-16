@@ -29,7 +29,7 @@ function AddTask({ onAddTaskSubmit }) {
           setDescription("");
         }}
       >
-        Adicionar Tarefa
+        Adicionar
       </button>
     </div>
   );
