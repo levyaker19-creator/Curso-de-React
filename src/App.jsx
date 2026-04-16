@@ -22,23 +22,6 @@ function App() {
     const newTaasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTaasks);
   }
-  useEffect(() => {
-    const fetchTasks = async () => {
-      //Chamar a API
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/todos?_limit=10",
-        {
-          method: "GET",
-        },
-      );
-      const data = await response.json();
-      setTasks(data);
-    };
-    //Pegar os Dados que a API Retornar
-
-    //Armazenar/Persistir os Dados no state
-    fetchTasks();
-  }, []);
 
   function onAddTaskSumit(title, description) {
     const newTask = {
